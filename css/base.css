@@ -1,0 +1,158 @@
+:root {
+  --primary: rgb(96, 11, 136);
+  --primary-shade: rgb(103, 47, 168);
+  --primary-tint: rgb(78, 6, 119);
+  --aux: rgb(242, 239, 245);
+  --aux-shade: rgb(241, 237, 245);
+  --aux-tint: rgb(179, 150, 245);
+  --contrast: rgb(76, 39, 163);
+  --contrast-shade: rgb(41, 3, 63);
+  --contrast-tint: rgb(154, 9, 250);
+  --red: rgb(221, 22, 22);
+  --red-tint: rgb(177, 7, 7);
+  --green: rgb(46, 168, 8);
+  --green-tint: rgb(5, 97, 40);
+  --shadow: 0 3px 6px -1px rgba(236, 166, 250, 0.32);
+  --br: 0.5rem;
+  --br-sm: 0.25rem;
+  --br-xs: 1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+}
+
+html,
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: var(--aux-shade);
+}
+
+header.nav {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--contrast);
+  position: sticky;
+  top: 0;
+  left: 0;
+  box-shadow: var(--shadow);
+}
+
+header.nav > .logomarca {
+  font-size: 1.5rem;
+  color: var(--aux);
+}
+
+header.nav > nav.navigation {
+  display: flex;
+  align-items: center;
+}
+
+header.nav > nav.navigation > a {
+  padding: 0.5rem 1rem;
+  border-radius: var(--br);
+  display: block;
+  background: var(--primary);
+  color: var(--aux-shade);
+  transition: all 200ms;
+}
+
+header.nav > nav.navigation > a:hover {
+  background: var(--primary-tint);
+  box-shadow: var(--shadow);
+}
+
+header.nav > nav.navigation > a + a {
+  margin-left: 1rem;
+}
+
+/* #region banner */
+.banner-container {
+  width: 100%;
+  height: 30rem;
+  background: var(--aux);
+  position: relative;
+}
+
+.banner-container > img {
+  width: 100%;
+  height: 100%;
+}
+
+.banner-container > .banner-product-info {
+  left: 0;
+  right: 0;
+  bottom: 2rem;
+  position: absolute;
+  background: var(--primary-shade);
+  color: var(--contrast-shade);
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.banner-container > .banner-comanders {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-container > .banner-comanders > span {
+  width: 1rem;
+  height: 1rem;
+  background: var(--contrast-shade);
+  border: 0.25rem solid var(--aux-shade);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.banner-container > .banner-comanders > span + span {
+  margin-left: 1rem;
+}
+
+.banner-container > .banner-comanders > span.active {
+  background: var(--primary);
+  border-color: var(--primary-tint);
+}
+
+/* #region banner */
+
+/* #region products */
+.products-container {
+  padding: 2rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(4, 15rem);
+  justify-content: space-around;
+}
+
+.products-container > .product-card {
+  width: 16rem;
+  padding: 0.5rem;
+  border-radius: var(--br-xs);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.products-container > .product-card > figure > img {
+  width: 100%;
+  height: 8.5rem;
+}
+
+/* #endregion */
