@@ -12,7 +12,8 @@
   --red-tint: rgb(177, 7, 7);
   --green: rgb(46, 168, 8);
   --green-tint: rgb(5, 97, 40);
-  --shadow: 0 3px 6px -1px rgba(236, 166, 250, 0.32);
+  --shadow: 0 3px 6px -1px rgba(96, 11, 136, 0.60);
+  --border: 1px solid var(--contrast-tint);
   --br: 0.5rem;
   --br-sm: 0.25rem;
   --br-xs: 1rem;
@@ -85,7 +86,14 @@ header.nav > nav.navigation > a + a {
   position: relative;
 }
 
-.banner-container > img {
+.banner-container > .banners {
+  width: 100%;
+  height: 30rem;
+  position: relative;
+  background: var(--color-primary);
+}
+
+.banner-container > .banners > img {
   width: 100%;
   height: 100%;
 }
@@ -155,4 +163,72 @@ header.nav > nav.navigation > a + a {
   height: 8.5rem;
 }
 
+.products-container >.product-card > .product-info {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  color: var(--contrast-shade);
+}
+
+.products-container > .product-card > .product-info > p {
+  padding: 0.5rem 0;
+  color: var(--contrast-tint);
+  font-size: 0.8rem;
+}
+
+.products-container > .product-card > .product-info > .product-price {
+  text-align: right;
+  color: var(--contrast-shade);
+}
+
+.products-container > .product-card > footer {
+  padding-top: 0.5rem;
+  display: flex;
+}
+
+.products-container > .product-card > footer > button {
+  flex: 1;
+  padding: 0.5rem;
+  border: var(--border);
+  border-radius: var(--br-sm);
+  background: var(--primary);
+  color: var(--aux);
+}
+
+.products-container > .product-card > footer > button:hover {
+  background: var(--primary-tint);
+}
+
+
+/* #endregion */
+
+
+.promotional {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem;
+}
+
+.promotional > .promotional-item {
+  width: 32rem;
+  height: 18rem;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  border-radius: var(--br-xs);
+  border: var(--border);
+}
+
+.promotional > .promotional-item > img {
+  width: 100%;
+  height: 100%;
+}
+
+/* #region footrt */
+body > footer {
+  padding: 1rem;
+  background: var(--primary);
+  text-align: center;
+  color: var(--aux);
+}
 /* #endregion */
