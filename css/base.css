@@ -98,7 +98,7 @@ header.nav > nav.navigation > a + a {
   height: 100%;
 }
 
-.banner-container > .banner-product-info {
+.banner-container > .banners > .banner-product-info {
   left: 0;
   right: 0;
   bottom: 2rem;

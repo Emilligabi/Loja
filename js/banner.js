@@ -19,7 +19,7 @@ function initBanner(selector, banners) {
     const banner = banners[i];
     const img = document.createElement("img");
     img.hidden = i > 0;
-    img.src = banner.img_url;
+    img.src = banner.image_url;
 
     const detail = document.createElement("div");
     detail.className = "banner-product-info";
@@ -73,9 +73,11 @@ if (isClearSlide) {
     intervalSlide = setInterval(function () {
       const next = index + 1 >= banners.length ? 0 : index +1;
       go(next, false);
-    }, 10 * 1000);
+    }, 5 * 1000);
 
   }
+
+  initSlide()
 }
 
 initBanner("banner-container", bannerImages);
