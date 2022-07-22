@@ -16,12 +16,14 @@
     <link rel="stylesheet" href="fontawesome/css/all.min.css" />
     <link rel="stylesheet" href="css/base.css" />
 
+    <script src="./js/anime.min.js"></script>
+
     <script src="./js/data.js"></script>
-    <script src="./js/utils.js"></script>
-   <script src="./js/banner.js" defer></script>
-   <script src="./js/products-cards.js" defer></script>
-   <script src="./js/categories.js" defer></script>
-   <script src="./js/cart.js" defer></script>
+   <script src="./js/utils.js"></script>
+
+   <script  defer src="./js/cart.js"></script>
+   <script defer src="./js/page-cart.js"></script>
+ 
 
   </head>
   <body>
@@ -38,14 +40,31 @@
       </nav>
     </header>
 
-    <section class="banner-container" id="banner-container">
-    </section>
+<section class="cart" id="cart">
+  <ul class="products-list" id="products-list"></ul>
+  <footer class="total-footer">
+    ]<span>Total</span>
+    <strong id="total-price"></strong>
+  </footer>
 
-    <section class="products-container" id="products-container">
-    </section>
+  <footer class="high-button">
+    <button id="go-to-register">Continuar</button>
+  </footer>
 
-    <section class="promotional" id="promotional">
-    </section>
+</section>
+
+<section class="register" id="register">
+  <form id="client">
+    <h1>Cadastro</h1>
+    <input type="text" id="name" placeholder="* Nome"/>
+
+    <footer class="high-button">
+      <button type="submit">Finalizar compra</button>
+    </footer>
+  </form>
+</section>
+
+<section class="loading-compra" id="loading"></section>
 
     <footer>Copyright</footer>
   </body>

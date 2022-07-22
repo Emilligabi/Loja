@@ -1,24 +1,49 @@
-class Card {
-constructor() {
-    this.badge = documen.getElementById("cart-badge");
+class Cart {
+  constructor() {
+    this.badge = document.getElementById("cart-badge");
     this.list = [];
 
-    if (localStorage.cart) {
-        this.list = JSON.parse(localStorage.getItem("cart"));
-        this.reloadBadge();
+    if (!!localStorage.cart) {
+      this.list = JSON.parse(localStorage.getItem("cart"));
+      this.reloadBadge();
     }
-}
-getList() {
+  }
+  getList() {
     return this.list;
-}
+  }
 
-reloadBadge() {
+  reloadBadge() {
     this.badge.innerText = this.list.length;
 
     if (this.list.length > 0) {
-        this.badge.style.display = "flex";
+      this.badge.style.display = "flex";
     } else {
-        this.badge.style.display = "nome";
+      this.badge.style.display = "nome";
     }
+  }
+
+addProduct(product) {
+    this.list.push(product);
+    this.reloadBadge();
+    this.updateStorage();
+}
+
+removeProduct(product) {
+    const index = this.list.findIndex(function (Item) {
+        return item.id === product.id;
+    });
+    this.list.splice(index, 1);
+    this.reloadBadge();
+    this.updateStorage();
+}
+
+getAmountProducts() {
+    return this.list.length;
+}
+
+updateStorage() {
+    localStorage.setItem("cart", JSON.stringify(this.list));
 }
 }
+
+const cart = new Cart();
