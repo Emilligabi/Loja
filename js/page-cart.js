@@ -29,17 +29,27 @@ class PageClient {
       }
 
       target.classList.add("active");
+      anime({
+        targets: target.children,
+        translateY: -150,
+        direction: "alternate",
+        easing: "easeInOutSine",
+        duration: 400,
+        delay: anime.stagger(100),
+        loop: true,
+      });
 
       localStorage.removeItem("cart");
       setTimeout(() => {
-          alert("compra efetuada com sucesso!");
-          location.href = "/";
+        alert("compra efetuada com sucesso!");
+        location.href = "/";
       }, 3000);
-
     };
   }
 
-  init() {}
+  init() {
+    
+  }
 
   render(products) {}
 }
