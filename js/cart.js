@@ -29,7 +29,7 @@ addProduct(product) {
 }
 
 removeProduct(product) {
-    const index = this.list.findIndex(function (Item) {
+    const index = this.list.findIndex(function (item) {
         return item.id === product.id;
     });
     this.list.splice(index, 1);

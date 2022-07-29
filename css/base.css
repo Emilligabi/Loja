@@ -35,6 +35,13 @@ body {
 
 body {
   background: var(--aux-shade);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body > section {
+  flex: 1;
 }
 
 header.nav {
@@ -242,6 +249,7 @@ header.nav > nav.navigation > a > .cart-badge {
 
 /* #region footrt */
 body > footer {
+  margin-top: auto;
   padding: 1rem;
   background: var(--primary);
   text-align: center;
@@ -354,6 +362,12 @@ margin-bottom: 1rem;
   box-shadow: var(--shadow);
   margin: 1rem 0;
   color: var(--primary-tint);
+}
+
+.high-button {
+  margin: 3rem auto 0;
+  padding: 2rem;
+  max-width: 920px;
 }
 
 .high-button > button {
